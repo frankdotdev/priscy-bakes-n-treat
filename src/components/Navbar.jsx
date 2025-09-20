@@ -54,7 +54,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="/contact">
-              <button className="ml-4 bg-brand-berry text-white font-body font-semibold py-2 px-5 rounded-full hover:bg-brand-brown transition-all duration-300 transform hover:scale-105 shadow-soft">
+              <button className="ml-4 bg-brand-berry text-8A304F font-body font-semibold py-2 px-5 rounded-full hover:bg-brand-brown transition-all duration-300 transform hover:scale-105 shadow-soft">
                 Order Now
               </button>
             </Link>
