@@ -60,34 +60,34 @@ const TestimonialsSlider = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4">
       <div className="relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
-            className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-brand-peach/20"
+            className="bg-white p-6 md:p-8 lg:p-12 rounded-2xl shadow-xl border border-brand-peach/20"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
           >
             <div className="flex flex-col items-center text-center">
-              <FaQuoteLeft className="text-4xl text-brand-berry mb-6 opacity-20" />
+              <FaQuoteLeft className="text-3xl md:text-4xl text-brand-berry mb-4 md:mb-6 opacity-20" />
 
-              <blockquote className="font-body text-lg md:text-xl text-brand-brown italic mb-6 leading-relaxed">
+              <blockquote className="font-body text-base md:text-lg lg:text-xl text-brand-brown italic mb-4 md:mb-6 leading-relaxed">
                 "{testimonials[currentIndex].quote}"
               </blockquote>
 
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-3 md:mb-4">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <FaStar key={i} className="text-brand-gold text-lg" />
+                  <FaStar key={i} className="text-brand-gold text-base md:text-lg" />
                 ))}
               </div>
 
-              <cite className="font-body font-bold text-brand-berry text-lg">
+              <cite className="font-body font-bold text-brand-berry text-base md:text-lg">
                 {testimonials[currentIndex].author}
               </cite>
-              <p className="font-body text-sm text-brand-brown/70 mt-1">
+              <p className="font-body text-xs md:text-sm text-brand-brown/70 mt-1">
                 {testimonials[currentIndex].location}
               </p>
             </div>
@@ -96,12 +96,12 @@ const TestimonialsSlider = () => {
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex justify-center space-x-2 mt-8">
+      <div className="flex justify-center space-x-2 mt-6 md:mt-8">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => goToTestimonial(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
               index === currentIndex
                 ? 'bg-brand-berry scale-125'
                 : 'bg-brand-peach hover:bg-brand-berry/50'
@@ -111,23 +111,23 @@ const TestimonialsSlider = () => {
         ))}
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on mobile to prevent overflow */}
       <button
         onClick={() => goToTestimonial(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-brand-peach hover:bg-brand-berry text-white p-3 rounded-full transition-all duration-300 shadow-lg"
+        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-brand-peach hover:bg-brand-berry text-white p-2 md:p-3 rounded-full transition-all duration-300 shadow-lg hidden md:block"
         aria-label="Previous testimonial"
       >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
       <button
         onClick={() => goToTestimonial(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-brand-peach hover:bg-brand-berry text-white p-3 rounded-full transition-all duration-300 shadow-lg"
+        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-brand-peach hover:bg-brand-berry text-white p-2 md:p-3 rounded-full transition-all duration-300 shadow-lg hidden md:block"
         aria-label="Next testimonial"
       >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
