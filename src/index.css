@@ -1,0 +1,232 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fix for navbar z-index and visibility */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: white !important;
+}
+
+/* Fix for hamburger menu button visibility */
+button[aria-controls="mobile-menu"] {
+  z-index: 10000;
+}
+
+/* Fix for mobile menu overlay */
+#mobile-menu {
+  z-index: 9999;
+  background-color: white;
+}
+
+/* Fix for logo fallback text visibility */
+span.font-heading {
+  display: flex !important;
+  align-items: center;
+  height: 4rem; /* 16 * 0.25rem */
+  font-size: 1.5rem;
+  color: #8a304f; /* brand-berry */
+}
+
+/* Fix for featured treat images spacing */
+.featured-treats img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix for blog section links */
+a.text-brand-berry:hover {
+  text-decoration: underline;
+}
+
+/* Custom brand colors - EXPERIMENT WITH THESE COLORS! */
+:root {
+  --color-brand-pink: #F9E1E1;
+  --color-brand-peach: #FADACD;
+  --color-brand-brown: #5C3A21;
+  --color-brand-berry: #8A304F;
+  --color-brand-gold: #D4AF37;
+  --color-brand-mint: #A2E4B8;
+  --color-brand-off-white: #FAF7F5;
+
+  /* 🎨 EXPERIMENT SECTION - Change these values to test different color schemes! */
+  --color-brand-primary: #8A304F;    /* Main brand color (buttons, links) */
+  --color-brand-secondary: #FADACD;  /* Secondary color (backgrounds, accents) */
+  --color-brand-accent: #D4AF37;     /* Accent color (highlights, gold elements) */
+  --color-brand-text: #5C3A21;       /* Text color */
+  --color-brand-background: #FAF7F5; /* Background color */
+
+  /* Try these alternative color schemes by uncommenting them:
+
+  /* 🌸 Pink Theme */
+  /*
+  --color-brand-primary: #E91E63;
+  --color-brand-secondary: #F8BBD9;
+  --color-brand-accent: #FF9800;
+  --color-brand-text: #4A148C;
+  --color-brand-background: #FCE4EC;
+  */
+
+  /* 🍃 Green Theme */
+  /*
+  --color-brand-primary: #2E7D32;
+  --color-brand-secondary: #A5D6A7;
+  --color-brand-accent: #FFC107;
+  --color-brand-text: #1B5E20;
+  --color-brand-background: #E8F5E8;
+  */
+
+  /* 🧡 Orange Theme */
+  /*
+  --color-brand-primary: #E65100;
+  --color-brand-secondary: #FFCC80;
+  --color-brand-accent: #9C27B0;
+  --color-brand-text: #BF360C;
+  --color-brand-background: #FFF3E0;
+  */
+
+  /* 💜 Purple Theme */
+  /*
+  --color-brand-primary: #7B1FA2;
+  --color-brand-secondary: #CE93D8;
+  --color-brand-accent: #00BCD4;
+  --color-brand-text: #4A148C;
+  --color-brand-background: #F3E5F5;
+  */
+}
+
+/* Global enhancements for modern, sleek feel */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-brand-text);
+    background-color: var(--color-brand-background);
+  }
+
+  * {
+    @apply transition-colors duration-300;
+  }
+
+  /* Custom focus styles for accessibility and modern look */
+  *:focus {
+    @apply outline-none ring-2;
+    --tw-ring-color: rgba(138, 48, 79, 0.5);
+  }
+
+  /* Smooth animations for all elements */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+}
+
+@layer utilities {
+  /* Gradient overlays for depth */
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(249,225,225,0.8) 0%, rgba(250,220,205,0.6) 100%);
+  }
+
+  /* Subtle shadows for elevation */
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  /* Button enhancements */
+  .btn-primary {
+    background-color: var(--color-brand-primary);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-brand-text);
+    transform: scale(1.05);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-brand-secondary);
+    color: var(--color-brand-text);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .btn-secondary:hover {
+    background-color: white;
+    transform: scale(1.05);
+  }
+
+  /* Custom brand color utilities */
+  .text-brand-pink { color: var(--color-brand-pink); }
+  .text-brand-peach { color: var(--color-brand-peach); }
+  .text-brand-brown { color: var(--color-brand-brown); }
+  .text-brand-berry { color: var(--color-brand-berry); }
+  .text-brand-gold { color: var(--color-brand-gold); }
+  .text-brand-mint { color: var(--color-brand-mint); }
+  .text-brand-off-white { color: var(--color-brand-off-white); }
+
+  .bg-brand-pink { background-color: var(--color-brand-pink); }
+  .bg-brand-peach { background-color: var(--color-brand-peach); }
+  .bg-brand-brown { background-color: var(--color-brand-brown); }
+  .bg-brand-berry { background-color: var(--color-brand-berry); }
+  .bg-brand-gold { background-color: var(--color-brand-gold); }
+  .bg-brand-mint { background-color: var(--color-brand-mint); }
+  .bg-brand-off-white { background-color: var(--color-brand-off-white); }
+
+  .border-brand-pink { border-color: var(--color-brand-pink); }
+  .border-brand-peach { border-color: var(--color-brand-peach); }
+  .border-brand-brown { border-color: var(--color-brand-brown); }
+  .border-brand-berry { border-color: var(--color-brand-berry); }
+  .border-brand-gold { border-color: var(--color-brand-gold); }
+  .border-brand-mint { border-color: var(--color-brand-mint); }
+  .border-brand-off-white { border-color: var(--color-brand-off-white); }
+
+  .font-heading { font-family: 'Dancing Script', cursive; }
+  .font-body { font-family: 'Poppins', sans-serif; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
