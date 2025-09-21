@@ -31,7 +31,7 @@ const Contact = () => {
       `---%0A` +
       `Please respond to this inquiry as soon as possible!`;
 
-    const whatsappURL = `https://wa.me/2348082600617?text=${whatsappMessage}`;
+    const whatsappURL = `https://wa.me/2349027543070?text=${whatsappMessage}`;
 
     window.open(whatsappURL, '_blank');
   };
@@ -73,7 +73,7 @@ const Contact = () => {
                 <FaWhatsapp className="text-brand-berry w-6 h-6 mr-4"/>
                 <div>
                   <p className="font-semibold">WhatsApp</p>
-                  <a href="https://wa.me/2348082600617" className="group-hover:underline">+234 808 260 0617</a>
+                  <a href="https://wa.me/2349027543070" className="group-hover:underline">+234 902 754 3070</a>
                   <p className="text-sm text-gray-600">Available 24/7 for inquiries</p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                 <FaPhone className="text-brand-berry w-6 h-6 mr-4"/>
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <a href="tel:+2348082600617" className="group-hover:underline">+234 808 260 0617</a>
+                  <a href="tel:+2349027543070" className="group-hover:underline">+234 902 754 3070</a>
                 </div>
               </div>
 

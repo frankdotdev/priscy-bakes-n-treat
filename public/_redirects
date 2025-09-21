@@ -1,1 +1,6 @@
 /*    /index.html   200
+
+# Allow blog pages to be served directly
+/buttercream-tips.html    /buttercream-tips.html   200
+/macaron-mastery.html     /macaron-mastery.html    200
+/seasonal-flavors.html    /seasonal-flavors.html   200

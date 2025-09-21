@@ -9,7 +9,7 @@ const Footer = () => {
     { icon: <FaInstagram />, href: 'https://www.instagram.com/med_zugi', label: 'Instagram' },
     { icon: <FaFacebook />, href: 'https://www.facebook.com/share/171UDcBNAR/', label: 'Facebook' },
     { icon: <FaTiktok />, href: 'https://www.tiktok.com/@zugi2k2?_t=ZS-8zrPpwwV9sm&_r=1', label: 'TikTok' },
-    { icon: <FaWhatsapp />, href: 'https://wa.me/2348082600617', label: 'WhatsApp' },
+    { icon: <FaWhatsapp />, href: 'https://wa.me/2349027543070', label: 'WhatsApp' },
   ];
 
   const quickLinks = [
@@ -124,8 +124,8 @@ const Footer = () => {
 
               <div className="flex items-center">
                 <FaPhone className="text-brand-peach mr-3 flex-shrink-0" />
-                <a href="tel:+2348082600617" className="font-body text-sm hover:text-brand-peach transition-colors">
-                  +234 808 260 0617
+                <a href="tel:+2349027543070" className="font-body text-sm hover:text-brand-peach transition-colors">
+                  +234 902 754 3070
                 </a>
               </div>
 

@@ -64,17 +64,17 @@ const About = () => {
               <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h3 className="font-semibold text-xl mb-2">Perfecting Your Buttercream</h3>
                 <p className="text-brand-brown leading-relaxed mb-4">Learn the secrets to smooth, creamy buttercream that holds its shape and tastes divine.</p>
-                <a href="buttercream-tips.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
+                <a href="/buttercream-tips.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
               </article>
               <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h3 className="font-semibold text-xl mb-2">Macaron Mastery</h3>
                 <p className="text-brand-brown leading-relaxed mb-4">Step-by-step guide to creating delicate, colorful macarons that impress every time.</p>
-                <a href="macaron-mastery.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
+                <a href="/macaron-mastery.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
               </article>
               <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h3 className="font-semibold text-xl mb-2">Seasonal Cake Flavors</h3>
                 <p className="text-brand-brown leading-relaxed mb-4">Explore unique cake flavors inspired by the seasons to delight your guests.</p>
-                <a href="seasonal-flavors.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
+                <a href="/seasonal-flavors.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
               </article>
             </div>
           </div>
