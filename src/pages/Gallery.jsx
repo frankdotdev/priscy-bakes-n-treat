@@ -1,4 +1,3 @@
-// src/pages/Gallery.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import cake1 from '../assets/cake1.png';
@@ -17,7 +16,7 @@ const creations = [
   { category: 'Wedding', name: 'Rustic Wildflower Dream', image: cake3, description: 'Naked cake with fresh wildflowers and greenery' },
   { category: 'Wedding', name: 'Vintage Lace Elegance', image: cake4, description: 'Fondant lace detailing with pearl accents' },
   { category: 'Wedding', name: 'Modern Minimalist', image: cake5, description: 'Clean lines with geometric fondant decorations' },
-  { category: 'Wedding', name: 'Traditional Igbo Wedding', image: 'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?q=80&w=1974', description: 'Multi-tier cake with traditional Igbo motifs' },
+  { category: 'Wedding', name: 'Romantic Garden Theme', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1974', description: 'Floral-inspired cake with cascading buttercream flowers' },
 
   // Birthday Cakes
   { category: 'Birthday', name: 'Chocolate Drip Delight', image: cake6, description: 'Rich chocolate cake with chocolate ganache drip' },
@@ -27,17 +26,21 @@ const creations = [
   { category: 'Birthday', name: 'Superhero Adventure', image: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c8b7?q=80&w=1974', description: 'Custom superhero cake for kids' },
   { category: 'Birthday', name: '21st Birthday Extravaganza', image: 'https://images.unsplash.com/photo-1604413191066-4dd207f682d4?q=80&w=1974', description: 'Gold and black themed celebration cake' },
 
-  // Traditional Nigerian Cakes
-  { category: 'Traditional', name: 'Ụmụada Coming of Age Cake', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1974', description: 'Elegant cake for Igbo coming of age ceremonies' },
-  { category: 'Traditional', name: 'New Yam Festival Cake', image: 'https://images.unsplash.com/photo-1558326567-98ae2405596b?q=80&w=1974', description: 'Cake featuring yam motifs and traditional colors' },
-  { category: 'Traditional', name: 'Ọmụgwọ Outdooring Cake', image: 'https://images.unsplash.com/photo-1565191499169-e771a337c443?q=80&w=1974', description: 'Baby-themed cake for naming ceremonies' },
-  { category: 'Traditional', name: 'Christmas Fruit Cake', image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1974', description: 'Rich Nigerian Christmas cake with fruits and nuts' },
+  // Pastries
+  { category: 'Pastries', name: 'French Macarons Assortment', image: 'https://images.unsplash.com/photo-1558326567-98ae2405596b?q=80&w=1974', description: 'Delicate almond cookies in various flavors' },
+  { category: 'Pastries', name: 'Croissants & Danishes', image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1974', description: 'Buttery pastries perfect for breakfast or brunch' },
+  { category: 'Pastries', name: 'Éclairs & Profiteroles', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1974', description: 'Cream-filled pastries with chocolate glaze' },
+  { category: 'Pastries', name: 'Tarts & Quiches', image: 'https://images.unsplash.com/photo-1565191499169-e771a337c443?q=80&w=1974', description: 'Savory and sweet tarts for any occasion' },
+  { category: 'Pastries', name: 'Puff Pastry Delights', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1974', description: 'Flaky pastries filled with seasonal fruits' },
+  { category: 'Pastries', name: 'Artisan Bread Loaves', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1974', description: 'Handcrafted breads with unique flavors' },
 
-  // Cupcakes & Small Treats
-  { category: 'Cupcakes', name: 'Red Velvet Kiss', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1974', description: 'Classic red velvet with cream cheese frosting' },
-  { category: 'Cupcakes', name: 'Assorted Gourmet Selection', image: 'https://images.unsplash.com/photo-1604413191066-4dd207f682d4?q=80&w=1974', description: 'Mixed flavors for any occasion' },
-  { category: 'Cupcakes', name: 'Lemon Blueberry Bliss', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1974', description: 'Tangy lemon with fresh blueberries' },
-  { category: 'Cupcakes', name: 'Puff Puff Cupcakes', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1974', description: 'Nigerian puff puff inspired cupcakes' },
+  // Snacks
+  { category: 'Snacks', name: 'Gourmet Cookies', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1974', description: 'Chewy chocolate chip and oatmeal raisin cookies' },
+  { category: 'Snacks', name: 'Mini Cupcakes', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1974', description: 'Bite-sized cupcakes in assorted flavors' },
+  { category: 'Snacks', name: 'Cake Pops', image: 'https://images.unsplash.com/photo-1604413191066-4dd207f682d4?q=80&w=1974', description: 'Fun, portable treats on sticks' },
+  { category: 'Snacks', name: 'Brownies & Blondies', image: 'https://images.unsplash.com/photo-1607478900766-efe13248b125?q=80&w=1974', description: 'Fudgy brownies and chewy blondies' },
+  { category: 'Snacks', name: 'Energy Balls', image: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c8b7?q=80&w=1974', description: 'Healthy no-bake snacks with nuts and dates' },
+  { category: 'Snacks', name: 'Savory Bites', image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1974', description: 'Cheese straws and savory crackers' },
 
   // Corporate & Special Events
   { category: 'Corporate', name: 'Corporate Branding Cake', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1974', description: 'Custom cakes for business events and launches' },
@@ -45,7 +48,7 @@ const creations = [
   { category: 'Corporate', name: 'Team Building Treats', image: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c8b7?q=80&w=1974', description: 'Fun themed treats for corporate gatherings' },
 ];
 
-const categories = ['All', 'Wedding', 'Birthday', 'Traditional', 'Cupcakes', 'Corporate'];
+const categories = ['All', 'Wedding', 'Birthday', 'Pastries', 'Snacks', 'Corporate'];
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -66,7 +69,7 @@ const Gallery = () => {
           <h1 className="text-5xl md:text-6xl font-heading text-brand-berry mb-4">Our Creations</h1>
           <p className="max-w-2xl mx-auto font-body text-lg text-brand-brown mb-8">
             A gallery of our favorite bakes. Each one tells a story of celebration, love, and sweet moments.
-            From traditional Nigerian ceremonies to modern celebrations, we create memories that last forever.
+            From elegant weddings to joyful birthdays, we create memories that last forever.
           </p>
         </div>
 

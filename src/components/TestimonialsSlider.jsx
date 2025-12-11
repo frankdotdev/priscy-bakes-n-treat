@@ -8,7 +8,7 @@ const TestimonialsSlider = () => {
 
   const testimonials = [
     {
-      quote: "Zugi's cakes are absolutely divine! The attention to detail and the flavors are unmatched. My wedding cake was the talk of the town!",
+      quote: "Priscy's cakes are absolutely divine! The attention to detail and the flavors are unmatched. My wedding cake was the talk of the town!",
       author: '— Chioma N.',
       rating: 5,
       location: 'Lagos, Nigeria'
@@ -20,7 +20,7 @@ const TestimonialsSlider = () => {
       location: 'Abuja, Nigeria'
     },
     {
-      quote: "As an Igbo man, I appreciate the cultural touch Zugi brings to her cakes. The 'Akara' themed cake for my mother's birthday was incredible!",
+      quote: "As an Igbo man, I appreciate the cultural touch Priscy brings to her cakes. The 'Akara' themed cake for my mother's birthday was incredible!",
       author: '— Chukwudi E.',
       rating: 5,
       location: 'Enugu, Nigeria'
@@ -32,13 +32,13 @@ const TestimonialsSlider = () => {
       location: 'Port Harcourt, Nigeria'
     },
     {
-      quote: "Zugi captured my vision perfectly! The custom design for my anniversary was breathtaking. She's truly an artist with cakes.",
+      quote: "Priscy captured my vision perfectly! The custom design for my anniversary was breathtaking. She's truly an artist with cakes.",
       author: '— Ibrahim K.',
       rating: 5,
       location: 'Kano, Nigeria'
     },
     {
-      quote: "The best cake I've ever had in Nigeria! The quality, taste, and presentation are world-class. Zugi is the real deal!",
+      quote: "The best cake I've ever had in Nigeria! The quality, taste, and presentation are world-class. Priscy is the real deal!",
       author: '— Fatima S.',
       rating: 5,
       location: 'Kaduna, Nigeria'

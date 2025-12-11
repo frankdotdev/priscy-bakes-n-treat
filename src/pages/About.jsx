@@ -1,7 +1,6 @@
-// src/pages/About.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import ZugiProfile from '../assets/zugi.png';
+import PriscyProfile from '../assets/priscy.png';
 
 const About = () => {
   return (
@@ -26,7 +25,7 @@ const About = () => {
               <div className="absolute inset-0 bg-brand-peach rounded-full transform rotate-6 shadow-soft"></div>
               <div className="absolute inset-0 bg-brand-pink rounded-full transform -rotate-6 shadow-soft"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-8 border-white shadow-glow">
-                <img src={ZugiProfile} alt="Zugi, the baker" className="w-full h-full object-cover" />
+                <img src={PriscyProfile} alt="Priscy, the baker" className="w-full h-full object-cover" />
               </div>
             </div>
           </motion.div>
@@ -41,44 +40,47 @@ const About = () => {
             <h1 className="font-heading text-5xl md:text-6xl text-brand-berry mb-6">My Story</h1>
             <div className="font-body text-lg text-brand-brown space-y-6 leading-relaxed">
               <p>
-                Hello! I'm Zugi, the heart and hands behind every creation you see. My journey into baking wasn't a straight line—it was a winding path paved with flour, sugar, and a whole lot of passion. It all started in my grandmother's kitchen, where the scent of freshly baked bread was my favorite perfume and licking the brownie batter spoon was the ultimate treat.
+                In the heart of Lagos, where the rhythm of city life meets the warmth of Nigerian hospitality, I embarked on a culinary journey that would define my life's passion. Priscy, they call me—a name that echoes through the bustling markets and quiet kitchens where dreams are baked into reality.
               </p>
               <p>
-                What began as a hobby soon blossomed into an obsession. I found my joy in the delicate art of piping buttercream flowers, the science of a perfect macaron, and the magic of turning simple ingredients into edible masterpieces. For me, a cake is never just a cake; it's a centerpiece for your most cherished memories.
+                My story begins not in grand halls, but in the humble embrace of family kitchens, where the alchemy of flour, sugar, and love transformed simple ingredients into symphonies of flavor. From the tender age when I first cracked an egg into a bowl, I knew that baking was more than a craft—it was an art form, a language of the soul that speaks directly to the heart.
               </p>
               <p>
-                At Zugi's Cakes and Treats, I pour my soul into every order. I believe in using only the highest quality ingredients—real butter, pure vanilla, and the richest chocolate—because you can taste the difference. My promise is to create something for you that is not only visually stunning but also unforgettably delicious. Thank you for letting me be a small part of your big celebrations.
+                Years of dedication have sculpted me into a master artisan, where each cake I create is a testament to precision, creativity, and an unwavering commitment to excellence. I source only the finest ingredients—velvet-smooth chocolates from distant lands, butter so pure it whispers of pastoral meadows, and fruits plucked at the peak of ripeness. Every creation is a masterpiece, designed not just to delight the palate, but to capture moments of joy, love, and celebration.
               </p>
               <p>
-                Over the years, I've had the privilege of creating cakes for weddings, birthdays, corporate events, and everything in between. Each project is unique, and I love the challenge of bringing your vision to life. Whether it's a whimsical character cake for a child's birthday or an elegant multi-tiered wedding cake, I approach every order with the same dedication and creativity.
+                "Taste the love in every bite"—this is my creed, my promise to you. Whether it's the towering elegance of a wedding cake, the whimsical charm of a birthday masterpiece, or the delicate sophistication of French pastries, each piece carries the essence of my passion. I have had the privilege of crafting desserts for grand celebrations and intimate gatherings alike, each one a unique expression of the client's vision brought to life through my skilled hands.
               </p>
-            <p>
-              When I'm not baking, you can find me experimenting with new recipes, attending baking workshops, or simply enjoying a quiet moment with a cup of tea and a good book. Baking is my passion, but it's also my way of connecting with people and creating joy. Thank you for considering Zugi's Cakes and Treats for your special occasions—I can't wait to work with you!
-            </p>
-          </div>
-
-          {/* New Blog Section */}
-          <div className="mt-16">
-            <h2 className="font-heading text-4xl text-brand-berry mb-8 text-center">From the Oven: Baking Tips & Recipes</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h3 className="font-semibold text-xl mb-2">Perfecting Your Buttercream</h3>
-                <p className="text-brand-brown leading-relaxed mb-4">Learn the secrets to smooth, creamy buttercream that holds its shape and tastes divine.</p>
-                <a href="/buttercream-tips.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
-              </article>
-              <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h3 className="font-semibold text-xl mb-2">Macaron Mastery</h3>
-                <p className="text-brand-brown leading-relaxed mb-4">Step-by-step guide to creating delicate, colorful macarons that impress every time.</p>
-                <a href="/macaron-mastery.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
-              </article>
-              <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h3 className="font-semibold text-xl mb-2">Seasonal Cake Flavors</h3>
-                <p className="text-brand-brown leading-relaxed mb-4">Explore unique cake flavors inspired by the seasons to delight your guests.</p>
-                <a href="/seasonal-flavors.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
-              </article>
+              <p>
+                Beyond the kitchen, I find inspiration in the vibrant tapestry of Lagos life—the colorful markets, the warm conversations, the shared laughter over a perfectly baked treat. When I'm not orchestrating culinary symphonies, you'll find me exploring new flavor profiles, mentoring aspiring bakers, or simply savoring a quiet moment with a cup of perfectly brewed tea.
+              </p>
+              <p>
+                Priscy's Bakes 'n' Treats is more than a business; it's a legacy of love, craftsmanship, and the joy of creating something beautiful. Thank you for allowing me to be part of your special moments—I look forward to crafting memories that will linger long after the last crumb is savored.
+              </p>
             </div>
-          </div>
-        </motion.div>
+
+            {/* New Blog Section */}
+            <div className="mt-16">
+              <h2 className="font-heading text-4xl text-brand-berry mb-8 text-center">From the Oven: Baking Tips & Recipes</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="font-semibold text-xl mb-2">Perfecting Your Buttercream</h3>
+                  <p className="text-brand-brown leading-relaxed mb-4">Learn the secrets to smooth, creamy buttercream that holds its shape and tastes divine.</p>
+                  <a href="/buttercream-tips.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
+                </article>
+                <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="font-semibold text-xl mb-2">Macaron Mastery</h3>
+                  <p className="text-brand-brown leading-relaxed mb-4">Step-by-step guide to creating delicate, colorful macarons that impress every time.</p>
+                  <a href="/macaron-mastery.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
+                </article>
+                <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="font-semibold text-xl mb-2">Seasonal Cake Flavors</h3>
+                  <p className="text-brand-brown leading-relaxed mb-4">Explore unique cake flavors inspired by the seasons to delight your guests.</p>
+                  <a href="/seasonal-flavors.html" target="_blank" className="text-brand-berry font-semibold hover:underline">Read More &rarr;</a>
+                </article>
+              </div>
+            </div>
+          </motion.div>
 
         </div>
       </div>

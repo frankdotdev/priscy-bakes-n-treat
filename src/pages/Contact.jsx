@@ -1,4 +1,3 @@
-// src/pages/Contact.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaFacebook, FaTiktok, FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
@@ -31,7 +30,7 @@ const Contact = () => {
       `---%0A` +
       `Please respond to this inquiry as soon as possible!`;
 
-    const whatsappURL = `https://wa.me/2349027543070?text=${whatsappMessage}`;
+    const whatsappURL = `https://wa.me/2348070706087?text=${whatsappMessage}`;
 
     window.open(whatsappURL, '_blank');
   };
@@ -65,7 +64,7 @@ const Contact = () => {
                 <FaEnvelope className="text-brand-berry w-6 h-6 mr-4"/>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href="mailto:hello@zugistreats.com" className="group-hover:underline">hello@zugistreats.com</a>
+                  <a href="mailto:hello@priscysbakes.com" className="group-hover:underline">hello@priscysbakes.com</a>
                 </div>
               </div>
 
@@ -73,7 +72,7 @@ const Contact = () => {
                 <FaWhatsapp className="text-brand-berry w-6 h-6 mr-4"/>
                 <div>
                   <p className="font-semibold">WhatsApp</p>
-                  <a href="https://wa.me/2349027543070" className="group-hover:underline">+234 902 754 3070</a>
+                  <a href="https://wa.me/2348070706087" className="group-hover:underline">+234 807 070 6087</a>
                   <p className="text-sm text-gray-600">Available 24/7 for inquiries</p>
                 </div>
               </div>
@@ -82,7 +81,7 @@ const Contact = () => {
                 <FaPhone className="text-brand-berry w-6 h-6 mr-4"/>
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <a href="tel:+2349027543070" className="group-hover:underline">+234 902 754 3070</a>
+                  <a href="tel:+2348070706087" className="group-hover:underline">+234 807 070 6087</a>
                 </div>
               </div>
 
@@ -90,8 +89,8 @@ const Contact = () => {
                 <FaMapMarkerAlt className="text-brand-berry w-6 h-6 mr-4 mt-1"/>
                 <div>
                   <p className="font-semibold">Location</p>
-                  <p>Achara Layout, Enugu</p>
-                  <p>Enugu State, Nigeria</p>
+                  <p>Lagos</p>
+                  <p>Lagos, Nigeria</p>
                   <p className="text-sm text-gray-600 mt-1">Delivery available across Nigeria</p>
                 </div>
               </div>
@@ -110,13 +109,13 @@ const Contact = () => {
 
             <h2 className="font-heading text-3xl text-brand-brown mt-10 mb-6">Follow Me</h2>
             <div className="flex space-x-6">
-               <a href="https://www.instagram.com/med_zugi" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:text-brand-berry text-3xl transition-colors" aria-label="Instagram">
+               <a href="https://www.instagram.com/priscy_bakes" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:text-brand-berry text-3xl transition-colors" aria-label="Instagram">
                  <FaInstagram />
                </a>
-               <a href="https://www.facebook.com/share/171UDcBNAR/" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:text-brand-berry text-3xl transition-colors" aria-label="Facebook">
+               <a href="https://www.facebook.com/share/new_facebook_link/" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:text-brand-berry text-3xl transition-colors" aria-label="Facebook">
                  <FaFacebook />
                </a>
-               <a href="https://www.tiktok.com/@zugi2k2?_t=ZS-8zrPpwwV9sm&_r=1" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:text-brand-berry text-3xl transition-colors" aria-label="TikTok">
+               <a href="https://www.tiktok.com/@priscy_bakes?_t=ZS-8zrPpwwV9sm&_r=1" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:text-brand-berry text-3xl transition-colors" aria-label="TikTok">
                  <FaTiktok />
                </a>
             </div>
@@ -124,7 +123,7 @@ const Contact = () => {
             <div className="mt-8 bg-brand-peach p-6 rounded-lg">
               <h3 className="font-heading text-xl text-brand-berry mb-3">Delivery Information</h3>
               <ul className="font-body text-sm text-brand-brown space-y-1">
-                <li>• Free delivery within Enugu</li>
+                <li>• Free delivery within Lagos</li>
                 <li>• Nationwide delivery available</li>
                 <li>• Special packaging for long-distance orders</li>
                 <li>• Temperature-controlled transport</li>
@@ -174,7 +173,6 @@ const Contact = () => {
                     <option value="birthday">Birthday</option>
                     <option value="wedding">Wedding</option>
                     <option value="corporate">Corporate Event</option>
-                    <option value="traditional">Traditional Ceremony</option>
                     <option value="anniversary">Anniversary</option>
                     <option value="other">Other</option>
                   </select>
@@ -237,10 +235,6 @@ const Contact = () => {
             <div className="bg-brand-off-white p-6 rounded-lg shadow-soft">
               <h3 className="font-body font-semibold text-brand-brown text-lg mb-2">Can you accommodate dietary restrictions?</h3>
               <p className="font-body text-brand-brown">Absolutely! I can create gluten-free, dairy-free, vegan, and nut-free options. Please let me know about any allergies or dietary preferences when placing your order.</p>
-            </div>
-            <div className="bg-brand-off-white p-6 rounded-lg shadow-soft">
-              <h3 className="font-body font-semibold text-brand-brown text-lg mb-2">Do you cater to traditional Nigerian ceremonies?</h3>
-              <p className="font-body text-brand-brown">Yes! I specialize in cakes for traditional ceremonies including weddings, Ụmụada (coming of age), Ọmụgwọ (outdooring), title ceremonies, and New Yam festivals. I can incorporate traditional motifs and colors.</p>
             </div>
             <div className="bg-brand-off-white p-6 rounded-lg shadow-soft">
               <h3 className="font-body font-semibold text-brand-brown text-lg mb-2">What is your cancellation policy?</h3>

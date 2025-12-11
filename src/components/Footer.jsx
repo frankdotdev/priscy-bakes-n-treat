@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <FaInstagram />, href: 'https://www.instagram.com/med_zugi', label: 'Instagram' },
-    { icon: <FaFacebook />, href: 'https://www.facebook.com/share/171UDcBNAR/', label: 'Facebook' },
-    { icon: <FaTiktok />, href: 'https://www.tiktok.com/@zugi2k2?_t=ZS-8zrPpwwV9sm&_r=1', label: 'TikTok' },
-    { icon: <FaWhatsapp />, href: 'https://wa.me/2349027543070', label: 'WhatsApp' },
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/priscy_bakes', label: 'Instagram' },
+    { icon: <FaFacebook />, href: 'https://www.facebook.com/share/new_facebook_link/', label: 'Facebook' },
+    { icon: <FaTiktok />, href: 'https://www.tiktok.com/@priscy_bakes?_t=ZS-8zrPpwwV9sm&_r=1', label: 'TikTok' },
+    { icon: <FaWhatsapp />, href: 'https://wa.me/2348070706087', label: 'WhatsApp' },
   ];
 
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'Our Creations', href: '/gallery' },
     { name: 'Menu & Pricing', href: '/menu' },
-    { name: 'About Zugi', href: '/about' },
+    { name: 'About Priscy', href: '/about' },
     { name: 'Contact Us', href: '/contact' },
   ];
 
@@ -43,10 +43,9 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="font-heading text-2xl text-brand-peach mb-4">Zugi's Cakes & Treats</h3>
+            <h3 className="font-heading text-2xl text-brand-peach mb-4">Priscy's Cakes & Treats</h3>
             <p className="font-body text-sm leading-relaxed mb-6">
-              Crafting sweet memories across Nigeria with love, passion, and the finest ingredients.
-              From traditional Igbo ceremonies to modern celebrations, we make every moment special.
+              Taste the Love in every bite 💕✨️🥞🧁🎂
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
@@ -117,22 +116,22 @@ const Footer = () => {
               <div className="flex items-center">
                 <FaMapMarkerAlt className="text-brand-peach mr-3 flex-shrink-0" />
                 <span className="font-body text-sm">
-                  Achara Layout, Enugu<br />
-                  Enugu State, Nigeria
+                  Lagos<br />
+                  Lagos, Nigeria
                 </span>
               </div>
 
               <div className="flex items-center">
                 <FaPhone className="text-brand-peach mr-3 flex-shrink-0" />
-                <a href="tel:+2349027543070" className="font-body text-sm hover:text-brand-peach transition-colors">
-                  +234 902 754 3070
+                <a href="tel:+2348070706087" className="font-body text-sm hover:text-brand-peach transition-colors">
+                  +234 807 070 6087
                 </a>
               </div>
 
               <div className="flex items-center">
                 <FaEnvelope className="text-brand-peach mr-3 flex-shrink-0" />
-                <a href="mailto:hello@zugistreats.com" className="font-body text-sm hover:text-brand-peach transition-colors">
-                  hello@zugistreats.com
+                <a href="mailto:hello@priscysbakes.com" className="font-body text-sm hover:text-brand-peach transition-colors">
+                  hello@priscysbakes.com
                 </a>
               </div>
 
@@ -186,7 +185,7 @@ const Footer = () => {
           className="mt-8 pt-6 border-t border-brand-peach/30 flex flex-col md:flex-row justify-between items-center text-center md:text-left"
         >
           <p className="font-body text-sm text-white/80">
-            &copy; {currentYear} Zugi's Cakes & Treats. All Rights Reserved.
+            &copy; {currentYear} Priscy's Cakes & Treats. All Rights Reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="font-body text-sm text-white/80 hover:text-brand-peach transition-colors">

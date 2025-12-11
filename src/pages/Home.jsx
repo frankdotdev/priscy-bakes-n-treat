@@ -1,10 +1,9 @@
-// src/pages/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import HeroSlideshow from '../components/HeroSlideshow';
 import TestimonialsSlider from '../components/TestimonialsSlider';
-import ZugiProfile from '../assets/zugi.png';
+import PriscyProfile from '../assets/priscy.png';
 import cake1 from '../assets/cake1.png';
 import cake2 from '../assets/cake2.png';
 import cake3 from '../assets/cake3.png';
@@ -56,7 +55,7 @@ const Home = () => {
       {/* 1. Hero Section */}
       <HeroSlideshow />
 
-      {/* 2. About Zugi (Brief) */}
+      {/* 2. About Priscy (Brief) */}
       <Section className="bg-white">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <motion.div
@@ -66,8 +65,8 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-8 border-brand-peach">
-              <img src={ZugiProfile} alt="Zugi, the baker" className="w-full h-full object-cover" />
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-8 border-brand-peach">
+              <img src={PriscyProfile} alt="Priscy, the baker" className="w-full h-full object-cover" />
             </div>
           </motion.div>
           <div className="md:w-2/3 text-center md:text-left">
@@ -87,7 +86,7 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Hi, I'm Zugi! Welcome to my world of sugar and spice. Every cake I bake is a piece of my heart, crafted with the finest ingredients and a dash of magic to make your special moments unforgettable.
+              Hi, I'm Priscy! Welcome to my world of sugar and spice. Every cake I bake is a piece of my heart, crafted with the finest ingredients and a dash of magic to make your special moments unforgettable. Taste the love in every bite.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -174,7 +173,7 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Why Choose Zugi's Treats?
+          Why Choose Priscy's Bakes 'n' Treats?
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

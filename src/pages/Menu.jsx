@@ -1,56 +1,49 @@
-// src/pages/Menu.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const menuSections = [
   {
-    category: 'Traditional Nigerian Cakes',
+    category: 'Wedding Cakes',
     items: [
-      { name: 'Red Velvet Cake (Ọbara Ọcha)', description: 'Classic Nigerian red velvet with cream cheese frosting - a staple at every celebration.', price: '₦35,000 - ₦85,000' },
-      { name: 'Chocolate Fudge Cake', description: 'Rich, decadent chocolate cake with layers of chocolate ganache and buttercream.', price: '₦40,000 - ₦90,000' },
-      { name: 'Vanilla Butter Cake', description: 'Light and fluffy vanilla cake with vanilla buttercream - perfect for all occasions.', price: '₦30,000 - ₦75,000' },
-      { name: 'Black Forest Cake', description: 'Traditional German-inspired cake with chocolate, cherries, and whipped cream.', price: '₦45,000 - ₦95,000' },
-      { name: 'Fruit Cake (Christmas Cake)', description: 'Rich fruit cake with nuts, dried fruits, and brandy - a Nigerian Christmas favorite.', price: '₦50,000 - ₦120,000' },
+      { name: 'Classic White Wedding Cake', description: 'Elegant 3-tier white cake with buttercream frosting and fresh flowers - perfect for traditional weddings.', price: '\u20A680,000 - \u20A6200,000' },
+      { name: 'Naked Wedding Cake', description: 'Modern naked cake with rustic charm, decorated with greenery and seasonal blooms.', price: '\u20A670,000 - \u20A6180,000' },
+      { name: 'Fondant Wedding Cake', description: 'Smooth fondant-covered cake with intricate sugar flowers and personalized details.', price: '\u20A690,000 - \u20A6250,000' },
+      { name: 'Semi-Naked Wedding Cake', description: 'Beautiful semi-naked design with exposed cake layers and elegant decorations.', price: '\u20A675,000 - \u20A6220,000' },
+      { name: 'Themed Wedding Cake', description: 'Custom themed cake incorporating your wedding colors, motifs, and personal style.', price: '\u20A6100,000 - \u20A6300,000' },
     ],
   },
   {
-    category: 'Igbo Cultural Cakes',
+    category: 'Birthday Cakes',
     items: [
-      { name: 'Ụmụada (Coming of Age) Cake', description: 'Elegant cake for Igbo coming of age ceremonies with traditional motifs and colors.', price: '₦60,000 - ₦150,000' },
-      { name: 'Wedding Cake (Àlụmdi na Nwunye)', description: 'Multi-tiered wedding cake with Igbo traditional elements and modern design.', price: '₦100,000 - ₦300,000' },
-      { name: 'New Yam Festival Cake', description: 'Special cake for Igbo New Yam festival with yam motifs and traditional colors.', price: '₦55,000 - ₦120,000' },
-      { name: 'Ọmụgwọ (Outdooring) Cake', description: 'Celebration cake for newborn outdooring ceremonies with baby motifs.', price: '₦45,000 - ₦100,000' },
-      { name: 'Title Taking Ceremony Cake', description: 'Prestigious cake for traditional title ceremonies with gold accents.', price: '₦80,000 - ₦200,000' },
+      { name: 'Kids Birthday Cake', description: 'Fun and colorful cake with character toppers, perfect for children\'s celebrations.', price: '\u20A625,000 - \u20A680,000' },
+      { name: 'Adult Birthday Cake', description: 'Sophisticated cake designs for milestone birthdays with elegant decorations.', price: '\u20A635,000 - \u20A6100,000' },
+      { name: 'Number Birthday Cake', description: 'Cake shaped like the birthday age number, customized with colors and themes.', price: '\u20A630,000 - \u20A690,000' },
+      { name: 'Photo Cake', description: 'Custom cake with edible photo prints of the birthday person or special memories.', price: '\u20A640,000 - \u20A6120,000' },
+      { name: 'Tiered Birthday Cake', description: 'Multi-tiered cake for larger birthday celebrations with multiple flavors.', price: '\u20A650,000 - \u20A6150,000' },
     ],
   },
   {
-    category: 'Small Chops & Finger Foods',
+    category: 'Pastries & Snacks',
     items: [
-      { name: 'Puff Puff (Àkàrà Balls)', description: 'Sweet fried dough balls dusted with sugar - perfect party treat.', price: '₦2,000 / dozen' },
-      { name: 'Chin Chin', description: 'Crispy fried dough strips - a Nigerian favorite for gatherings.', price: '₦3,000 / pack' },
-      { name: 'Cupcakes (Assorted)', description: 'Mini cakes in various flavors including red velvet, chocolate, and vanilla.', price: '₦8,000 / dozen' },
-      { name: 'Cake Pops', description: 'Fun, portable treats on sticks - great for kids parties.', price: '₦6,000 / dozen' },
-      { name: 'Mini Doughnuts', description: 'Bite-sized doughnuts with various toppings and fillings.', price: '₦4,000 / dozen' },
+      { name: 'French Macarons', description: 'Delicate almond meringue cookies in various flavors - perfect for elegant gatherings.', price: '\u20A68,000 / dozen' },
+      { name: 'Mini Cupcakes', description: 'Bite-sized cupcakes in assorted flavors, ideal for parties and events.', price: '\u20A64,000 / dozen' },
+      { name: 'Éclairs & Cream Puffs', description: 'Classic French pastries filled with custard and topped with chocolate.', price: '\u20A66,000 / dozen' },
+      { name: 'Cake Pops', description: 'Fun, portable treats on sticks - great for kids parties and casual events.', price: '\u20A63,000 / dozen' },
+      { name: 'Mini Tarts', description: 'Assorted fruit and custard tarts in elegant mini sizes.', price: '\u20A65,000 / dozen' },
+      { name: 'Doughnuts', description: 'Freshly baked doughnuts with various glazes and toppings.', price: '\u20A62,000 / dozen' },
+      { name: 'Cookies', description: 'Chewy chocolate chip, oatmeal raisin, and specialty cookies.', price: '\u20A63,000 / dozen' },
+      { name: 'Brownies & Blondies', description: 'Rich, fudgy brownies and chewy blondies in various flavors.', price: '\u20A64,000 / dozen' },
     ],
   },
   {
-    category: 'Traditional Nigerian Desserts',
+    category: 'Corporate & Events',
     items: [
-      { name: 'Àkàrà (Bean Cakes)', description: 'Sweet fried bean cakes - a traditional Nigerian treat with modern twist.', price: '₦3,000 / piece' },
-      { name: 'Coconut Candy', description: 'Sweet coconut treats - perfect for traditional ceremonies.', price: '₦2,500 / piece' },
-      { name: 'Banana Fritters', description: 'Sweet fried bananas - a simple yet delicious traditional dessert.', price: '₦2,000 / piece' },
-      { name: 'Groundnut Candy', description: 'Sweet peanut candy - a crunchy traditional Nigerian sweet.', price: '₦1,500 / piece' },
-      { name: 'Palm Wine Jelly', description: 'Traditional jelly made with palm wine - unique Nigerian dessert.', price: '₦4,000 / piece' },
-    ],
-  },
-  {
-    category: 'Corporate & Event Catering',
-    items: [
-      { name: 'Office Birthday Packages', description: 'Complete cake and treats package for office celebrations.', price: '₦25,000 - ₦75,000' },
-      { name: 'Wedding Cake Packages', description: 'Full wedding cake service including delivery and setup.', price: '₦150,000 - ₦500,000' },
-      { name: 'Party Favor Boxes', description: 'Custom decorated cookies and treats in gift boxes.', price: '₦5,000 - ₦15,000 / box' },
-      { name: 'Corporate Event Catering', description: 'Large scale dessert catering for conferences and events.', price: '₦200,000+' },
-      { name: 'Custom Theme Cakes', description: 'Fully customized cakes for any theme or occasion.', price: '₦50,000 - ₦250,000' },
+      { name: 'Office Birthday Packages', description: 'Complete cake and treats package for office celebrations.', price: '\u20A615,000 - \u20A650,000' },
+      { name: 'Corporate Event Catering', description: 'Large scale dessert catering for conferences and corporate gatherings.', price: '\u20A6100,000+' },
+      { name: 'Party Favor Boxes', description: 'Custom decorated cookies and treats in elegant gift boxes.', price: '\u20A63,000 - \u20A610,000 / box' },
+      { name: 'Anniversary Cakes', description: 'Special cakes for wedding anniversaries and milestone celebrations.', price: '\u20A645,000 - \u20A6150,000' },
+      { name: 'Custom Theme Cakes', description: 'Fully customized cakes for any theme or special occasion.', price: '\u20A630,000 - \u20A6200,000' },
+      { name: 'Dessert Tables', description: 'Complete dessert table setup with assorted pastries and cakes.', price: '\u20A680,000 - \u20A6250,000' },
     ],
   },
 ];
@@ -144,7 +137,7 @@ const Menu = () => {
         <div className="text-center mt-16 bg-brand-peach p-8 rounded-lg">
           <h3 className="font-heading text-3xl text-brand-berry mb-4">Need Something Special?</h3>
           <p className="font-body text-brand-brown mb-6 max-w-2xl mx-auto">
-            We specialize in custom designs for any occasion. From traditional Igbo ceremonies to modern celebrations,
+            We specialize in custom designs for any occasion. From elegant weddings to joyful birthdays,
             we can create something uniquely yours. Contact us for a personalized consultation!
           </p>
           <a href="/contact" className="inline-block bg-brand-berry text-white font-body font-semibold py-3 px-8 rounded-full hover:bg-brand-brown transition-all duration-300 transform hover:scale-105">

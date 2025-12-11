@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
-import ZugiLogo from '../assets/zugi-logo.png';
+import PriscyLogo from '../assets/priscy-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
     { to: '/', text: 'Home' },
     { to: '/gallery', text: 'Creations' },
     { to: '/menu', text: 'Menu & Pricing' },
-    { to: '/about', text: 'About Zugi' },
+    { to: '/about', text: 'About Priscy' },
   ];
 
   return (
@@ -31,13 +31,13 @@ const Navbar = () => {
               {logoLoaded ? (
                 <img
                   className="h-16 w-auto"
-                  src={ZugiLogo}
-                  alt="Zugi's Cakes and Treats"
+                  src={PriscyLogo}
+                  alt="Priscy's Cakes and Treats"
                   onLoad={() => setLogoLoaded(true)}
                   onError={() => setLogoLoaded(false)}
                 />
               ) : (
-                <span className="h-16 flex items-center text-2xl font-heading text-brand-berry">Zugi's Treats</span>
+                <span className="h-16 flex items-center text-2xl font-heading text-brand-berry">Priscy's Bakes 'n' Treats</span>
               )}
             </Link>
           </div>
