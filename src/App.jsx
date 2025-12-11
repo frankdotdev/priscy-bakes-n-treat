@@ -1,11 +1,13 @@
 // src/App.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import { AnimatePresence } from 'framer-motion';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ChristmasBanner from './components/ChristmasBanner';
+import ChristmasPopup from './components/ChristmasPopup';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Menu from './pages/Menu';
@@ -14,10 +16,80 @@ import Contact from './pages/Contact';
 import TestTailwind from './components/TestTailwind';
 
 function App() {
+  const [showChristmasBanner, setShowChristmasBanner] = useState(true);
+  const [showChristmasPopup, setShowChristmasPopup] = useState(false);
+
+  // Check if Christmas offer is still active (before Dec 26th)
+  const isChristmasActive = () => {
+    const now = new Date();
+    const endDate = new Date('2025-12-26');
+    return now <= endDate;
+  };
+
+  useEffect(() => {
+    if (isChristmasActive()) {
+      // Show popup after 3 seconds on first visit
+      const timer = setTimeout(() => {
+        setShowChristmasPopup(true);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleOpenPopup = () => {
+    setShowChristmasPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowChristmasPopup(false);
+  };
+
+  const handleCloseBanner = () => {
+    setShowChristmasBanner(false);
+  };
+
+  if (!isChristmasActive()) {
+    return (
+      <Router>
+        <div className="bg-brand-off-white font-body min-h-screen">
+          <Navbar />
+          <AnimatePresence mode="wait">
+            <main className="animate-fade-in">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/menu" element={<Menu />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/test-tailwind" element={<TestTailwind />} />
+              </Routes>
+            </main>
+          </AnimatePresence>
+          <Footer />
+
+          {/* Enhanced Floating WhatsApp Button */}
+          <a
+            href="https://wa.me/2348070706087"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-soft z-50 hover:bg-green-600 transition-all duration-300 transform hover:scale-110 hover-glow animate-bounce"
+            aria-label="Chat on WhatsApp"
+          >
+            <FaWhatsapp size={28} />
+          </a>
+        </div>
+      </Router>
+    );
+  }
+
   return (
     <Router>
       <div className="bg-brand-off-white font-body min-h-screen">
         <Navbar />
+        {showChristmasBanner && (
+          <ChristmasBanner onOpenPopup={handleOpenPopup} onClose={handleCloseBanner} />
+        )}
         <AnimatePresence mode="wait">
           <main className="animate-fade-in">
             <Routes>
@@ -31,6 +103,9 @@ function App() {
           </main>
         </AnimatePresence>
         <Footer />
+
+        {/* Christmas Popup */}
+        <ChristmasPopup isOpen={showChristmasPopup} onClose={handleClosePopup} />
 
         {/* Enhanced Floating WhatsApp Button */}
         <a
