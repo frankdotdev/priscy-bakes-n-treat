@@ -187,10 +187,13 @@ const Contact = () => {
                   <label htmlFor="budget" className="block text-sm font-medium text-brand-brown">Budget Range (₦)</label>
                   <select name="budget" id="budget" className="mt-1 block w-full px-3 py-2 bg-white border border-brand-peach rounded-md shadow-sm focus:outline-none focus:ring-brand-berry focus:border-brand-berry">
                     <option value="">Select budget range</option>
+                    <option value="25k-50k">₦5,000 - ₦15,000</option>
+                    <option value="25k-50k">₦15,000 - ₦25,000</option>
                     <option value="25k-50k">₦25,000 - ₦50,000</option>
                     <option value="50k-100k">₦50,000 - ₦100,000</option>
                     <option value="100k-200k">₦100,000 - ₦200,000</option>
                     <option value="200k+">₦200,000+</option>
+                    <option value="200k+">Custom</option>
                   </select>
                 </div>
 
